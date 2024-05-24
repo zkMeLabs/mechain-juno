@@ -1,0 +1,7 @@
+Dockerfile
+Vagrantfile
+
+build/
+config.yaml
+coverage.txt
+firebase-config.json
