@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/bnb-chain/greenfield/app/params"
+	"cosmossdk.io/simapp/params"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/forbole/juno/v4/types/config"

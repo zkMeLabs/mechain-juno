@@ -1,7 +1,7 @@
 package registrar
 
 import (
-	"github.com/bnb-chain/greenfield/app/params"
+	"cosmossdk.io/simapp/params"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/forbole/juno/v4/database"
@@ -19,7 +19,7 @@ import (
 	storageprovider "github.com/forbole/juno/v4/modules/storage_provider"
 	"github.com/forbole/juno/v4/modules/telemetry"
 	"github.com/forbole/juno/v4/modules/validator"
-	"github.com/forbole/juno/v4/modules/virtual_group"
+	virtualgroup "github.com/forbole/juno/v4/modules/virtual_group"
 	"github.com/forbole/juno/v4/node"
 	"github.com/forbole/juno/v4/types/config"
 )

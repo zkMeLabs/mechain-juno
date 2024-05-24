@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"unsafe"
 
-	"github.com/bnb-chain/greenfield/app/params"
+	"cosmossdk.io/simapp/params"
 	db "github.com/cometbft/cometbft-db"
 	cfg "github.com/cometbft/cometbft/config"
 	"github.com/cometbft/cometbft/libs/log"
@@ -60,7 +60,7 @@ func NewSource(home string, encodingConfig *params.EncodingConfig) (*Source, err
 	return &Source{
 		StoreDB: levelDB,
 
-		Codec:       encodingConfig.Marshaler,
+		Codec:       encodingConfig.Codec,
 		LegacyAmino: encodingConfig.Amino,
 
 		BlockStore: tmstore.NewBlockStore(blockStoreDB),

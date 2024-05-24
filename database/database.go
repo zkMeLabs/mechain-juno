@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bnb-chain/greenfield/app/params"
+	"cosmossdk.io/simapp/params"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 	"gorm.io/gorm/schema"
@@ -285,7 +285,7 @@ func (db *Impl) SaveTx(ctx context.Context, blockTimestamp uint64, index int, tx
 
 	var msgs = make([]string, len(tx.Body.Messages))
 	for index, msg := range tx.Body.Messages {
-		bz, err := db.EncodingConfig.Marshaler.MarshalJSON(msg)
+		bz, err := db.EncodingConfig.Codec.MarshalJSON(msg)
 		if err != nil {
 			return err
 		}
@@ -293,14 +293,14 @@ func (db *Impl) SaveTx(ctx context.Context, blockTimestamp uint64, index int, tx
 	}
 	msgsBz := fmt.Sprintf("[%s]", strings.Join(msgs, ","))
 
-	feeBz, err := db.EncodingConfig.Marshaler.MarshalJSON(tx.AuthInfo.Fee)
+	feeBz, err := db.EncodingConfig.Codec.MarshalJSON(tx.AuthInfo.Fee)
 	if err != nil {
 		return fmt.Errorf("failed to JSON encode tx fee: %s", err)
 	}
 
 	var sigInfos = make([]string, len(tx.AuthInfo.SignerInfos))
 	for index, info := range tx.AuthInfo.SignerInfos {
-		bz, err := db.EncodingConfig.Marshaler.MarshalJSON(info)
+		bz, err := db.EncodingConfig.Codec.MarshalJSON(info)
 		if err != nil {
 			return err
 		}

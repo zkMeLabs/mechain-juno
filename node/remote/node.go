@@ -8,7 +8,6 @@ import (
 	"strings"
 	"time"
 
-	gftypes "github.com/bnb-chain/greenfield/sdk/types"
 	constypes "github.com/cometbft/cometbft/consensus/types"
 	tmjson "github.com/cometbft/cometbft/libs/json"
 	httpclient "github.com/cometbft/cometbft/rpc/client/http"
@@ -21,6 +20,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/tx"
 	"github.com/cosmos/cosmos-sdk/types/tx/signing"
 	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
+	gftypes "github.com/evmos/evmos/v12/sdk/types"
 	"google.golang.org/grpc"
 
 	"github.com/forbole/juno/v4/log"

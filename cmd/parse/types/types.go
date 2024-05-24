@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/bnb-chain/greenfield/app"
+	"github.com/evmos/evmos/v12/app"
 
 	"github.com/forbole/juno/v4/database"
 	"github.com/forbole/juno/v4/database/builder"

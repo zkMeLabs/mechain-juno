@@ -38,11 +38,11 @@ type Worker struct {
 func NewWorker(ctx *Context, queue types.HeightQueue, index int, concurrentSync bool) *Worker {
 	return &Worker{
 		index:          index,
-		codec:          ctx.EncodingConfig.Marshaler,
+		codec:          ctx.EncodingConfig.Codec,
 		node:           ctx.Node,
 		queue:          queue,
 		db:             ctx.Database,
-		indexer:        DefaultIndexer(ctx.EncodingConfig.Marshaler, ctx.Node, ctx.Database, ctx.Modules),
+		indexer:        DefaultIndexer(ctx.EncodingConfig.Codec, ctx.Node, ctx.Database, ctx.Modules),
 		modules:        ctx.Modules,
 		concurrentSync: concurrentSync,
 	}

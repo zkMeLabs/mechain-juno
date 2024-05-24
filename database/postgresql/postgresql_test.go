@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/bnb-chain/greenfield/app/params"
+	"cosmossdk.io/simapp/params"
 	"github.com/cosmos/cosmos-sdk/types/module/testutil"
 	"github.com/stretchr/testify/suite"
 
@@ -32,7 +32,7 @@ func (suite *DbTestSuite) SetupTest() {
 	codec := testutil.MakeTestEncodingConfig()
 	paramsCodec := params.EncodingConfig{
 		InterfaceRegistry: codec.InterfaceRegistry,
-		Marshaler:         codec.Codec,
+		Codec:             codec.Codec,
 		TxConfig:          codec.TxConfig,
 		Amino:             codec.Amino,
 	}
