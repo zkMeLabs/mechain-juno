@@ -19,5 +19,4 @@ coverage.txt
 *.toml
 
 config.yaml
-juno
 logs/
