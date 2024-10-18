@@ -8,15 +8,18 @@
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Background](#background)
+- [Compatibility table](#compatibility-table)
 - [Usage](#usage)
+- [Testing](#testing)
 - [GraphQL integration](#graphql-integration)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Background
 
-This version of Juno is a fork of [bnb-chain's Juno](https://github.com/bnb-chain/juno).
+This version of Juno is a fork of [mechain-chain's Juno](https://github.com/zkMeLabs/mechain-juno).
 
 The main reason behind the fork what to improve the original project by:
 
@@ -32,7 +35,7 @@ On the other hand, to achieve a highly modular code, we implemented extension po
 Since the Cosmos SDK has evolved a lot, we have different versions of Juno available.
 
 |               Cosmos SDK Version                |   Juno branch    |
-|:-----------------------------------------------:|:----------------:|
+| :---------------------------------------------: | :--------------: |
 |                    `v0.37.x`                    | `cosmos-v0.37.x` |
 |                    `v0.38.x`                    | `cosmos-v0.38.x` |
 |                    `v0.39.x`                    | `cosmos-v0.39.x` |
